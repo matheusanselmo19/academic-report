@@ -27,17 +27,52 @@ A seguinte tabela apresenta os movimentos dos veículos Subaquáticos em relaç�
 %lembre de usar o livro de fossen
 \subsection{Sensores}
 
-A presença de sensores em um sistema pode permiti a obtenção de dados de vários. A médida dos sensores podem ser direcionados para a propria dinânica de um sistema, neste caso um ROV, e o ambinete no qual este realizar suas ações.
-Assim como classifica \cite[Towards], os sensores de um ROV pode distinguindo em dois grupos: \it[playloads sensors]  e \it[navigations sensor]. Os \it[payloads sensor] são unidades de medidas destinados a coletar dados do ambiente, alguns exemplos destes sensores saão: sensores CTD, destinados a mensurar a condutividades, temperatura e profundidade, sensores ADCP-Acoustic Doppler Curent pPofiler- são usados para medir a velocidade das correntes e câmeras para obter dados visuais.
+A presença de sensores em um sistema pode permiti a obtenção de dados de vários. A medida dos sensores podem ser direcionados para a propria dinânica de um sistema, neste caso um ROV, e o ambinete no qual este realizar suas ações.
+Assim como classifica \cite{Towards}, os sensores de um ROV pode distinguindo em dois grupos: \textit{playload sensors}  e \textit{navigations sensor}. Os \textit{payload sensors} são unidades de medidas destinados a coletar dados do ambiente, alguns exemplos destes sensores saão: sensores CTD, destinados a mensurar a condutividades, temperatura e profundidade, sensores ADCP-Acoustic Doppler Curent pPofiler- são usados para mensurar a velocidade das correntes e câmeras para obter dados visuais.
 
-Os navigations sensors são implementados com o foco na navegação do veículo, logos dados sobre a posição, orientantçã e veocidade são mensurados. Os navigations sensors maiscomum são: sensores de pressão, (DVL) mede o deslocamento Doppler no sinal de entrada refletido no fundo do mar para obter os dados da velocidade linear e sensores de inertia. Câmeras tambem do pode ser usada para obter dados da posiação de veiculos, assim como foi demostrado por \cite{visual_serving}, no qual foi ultizado duas câmeras par realizar um acomphamento da posição de ROV.
+Os navigations sensors são implementados com o foco na navegação do veículo, logos dados sobre a posição, orientantçã e veocidade são os principais alvos a serem mensurados. Os navigations sensors mais comum são: sensores de pressão, (DVL) mede o deslocamento Doppler no sinal de entrada refletido no fundo do mar para obter os dados da velocidade linear e sensores de inercia. 
+Câmeras também podem ser usadas para obter dados da posiação de veículos, assim como foi demostrado por \cite{visual_serving}, no qual foi ultizado duas câmeras par realizar um acomphamento da posição de ROV. Os dados dos sensores podem ser usados para o monitoramento e para as ações de controle.
+
+% Colocar a tabela com as imagens dos principais sensores
+
+
 
 \subsection{Controle}
-\subsection{Modelos}
+\subsection{Arquitetura de Operação}
+Há diversas formas que as arquiteturas de operação diante do nível de autonomia dos ROVs podem ser implementados. Uma comum é quando um humano é responsável 100\% das atuações do veículos, em outras palavras, é aplicado um controle 100\% manual. O operador, neste caso costuma ser um bastante habilidoso, comunalmente usa uma video câmera para estimar a posiação do veículo no ambiente.
+
+% achar uma referência para o controle manual.
+
+Uma arquiteura, segundo \cite{wireless_joy}, é \textit{Human in the Loop} - HITL- que é realizado considerando a arquitetura \textit{Human Centered Automantion} - HCA. Nesta arquitetura o operador humano realizar algumas tarefas do sistema de controle, ao exemplo de selecionar de qual mode de ação de movimento o veiculo deve realizar. Alguns exemplos dos modo de ação o controle de profundidade, heading e seguir tubulações.
+
+Outros tipos de operações são apontadas por \cite{Towards}: \textit{Automatic Operation}, \textit{Management by consent}, \textit{Semi-autonomous or management by exception} e \textit{Highly autonomous}. O primeiro, \textit{Automatic Operation}, possui caracteristicas semelhante ao \textit{human in the loop} e o segundo, \textit{Management by consent} é basicamente uma teleoperação. O \textit{Semi-autonomous or management by exception} é montado para o sistema executar automaticamente as funções relacionadas à missão quando os tempos de resposta são muito curtos para intervenção humana.  Quando não necessidade de um operador realizar nenhuma intervenção sobre o veiculo, o tipo de operação é considerada \textit{Highly autonomous}. Esta última classificação esta mais proxima das condicções necessarios para um veiculo submarino ser considerado um AUV.
+
+
+
+
+
+\subsection{Modelos de ROVs}
+
+Existem vários modelos de robôs submarinos. O formato deste veículos podem ser em função de diversas considerações. Local de atuação, profundidade onde as atividades serão executadas, suporte para a presença de braços manipuladores.
+\subsubsection{BlueROV2}
+O BlueROV2, representado na Figura \ref{fig:blue}, é desenvolvido pela Blue robotics, uma comphania americana especilizada em robô submarinos. Assim como informa \cite{Bluerobotics}, este veículo é destinado para realizar inpeções e pesquisas. O alcance de profundidade é de 100 m. 6 thursters são responsáveis pela atuação, 4 lâmpadas, também há versões com 6, e uma camêra HD coletar os dados visuais. 
+Além destas configurações, outros intems pode ser adicionados ao exemplo de gripper, para realizar aconrragem, e sonares, para medição de profundidade e escananeamento. Um ponto imporante do Blue Rov é o fato de ROV ser opensource,  que permiti de várias modificações e dominio dos eventuais usuário.
+
+\begin{figure}
+  \centering 
+  \includegraphics[width=150.5]{blue_rov.png}
+  \caption{BlueROV2}
+  \label{fig:blue}
+\end{figure}
+
+\subsubsection{Freedom ROV}
+
+O Freedom ROV, apresentado na Figura \ref{fig:blue}, é desenvolvido pela comphania OCEANEERING, dentêm uma como a principal caracteristicas ter modos de operações híbridas.
+
+
 \section{Revisão bibliográfica}
 \subsection{Rede de Citação}
 \subsection{Principais autores}
-\subsection{Modelos}
 \section{Mapa COnceitual}
 \lipsum[1]
 
