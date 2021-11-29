@@ -3,12 +3,42 @@
 Importante sempre ter um parágrafo introdutório para explicar os resultados encontrados.
 
 %--------- NEW SECTION ----------------------
-\section{Testes unitários}
-\label{sec:testu}
-\lipsum[1]
+\section{Robôs Subaquáticos}
+\label{underwater_robots}
 
-\section{Integração do sistema}
-\label{sec:intsis}
+
+\subsection{Considerações na Modelagem}
+Esta seção aborda os princiapis elementos e considerações para modelagens de ROVs.
+
+Assim como quase todos robôs móveis podem estar posicionado em relação a uma referência, a posição de um robô subaquatico pode ser representando, de acordo com \cite{Antonelli}, diante a sua posição e orientação.
+Diante a um Frame fixo de referência, é possivel obter a posição, usando técnicas de sensoriamentom, de um veículo submerso que comunalmente representando como vetor.
+%vetor = (x,y,z)
+
+Para representar a rotação dos veiculos diante ao mesmo frame pode usar o vetor
+%n =(r,p,y)
+que é a representação de roll, pitch  e yaw.
+
+A seguinte tabela apresenta os movimentos dos veículos Subaquáticos em relação ao destes. Esta tabela esta de acordo que demostrado em \cite[Antonelli]. Estes movimentos, surge, sway e heave, também são usados navegações marinhas. 
+
+
+
+
+
+%lembre de usar o livro de fossen
+\subsection{Sensores}
+
+A presença de sensores em um sistema pode permiti a obtenção de dados de vários. A médida dos sensores podem ser direcionados para a propria dinânica de um sistema, neste caso um ROV, e o ambinete no qual este realizar suas ações.
+Assim como classifica \cite[Towards], os sensores de um ROV pode distinguindo em dois grupos: \it[playloads sensors]  e \it[navigations sensor]. Os \it[payloads sensor] são unidades de medidas destinados a coletar dados do ambiente, alguns exemplos destes sensores saão: sensores CTD, destinados a mensurar a condutividades, temperatura e profundidade, sensores ADCP-Acoustic Doppler Curent pPofiler- são usados para medir a velocidade das correntes e câmeras para obter dados visuais.
+
+Os navigations sensors são implementados com o foco na navegação do veículo, logos dados sobre a posição, orientantçã e veocidade são mensurados. Os navigations sensors maiscomum são: sensores de pressão, (DVL) mede o deslocamento Doppler no sinal de entrada refletido no fundo do mar para obter os dados da velocidade linear e sensores de inertia. Câmeras tambem do pode ser usada para obter dados da posiação de veiculos, assim como foi demostrado por \cite{visual_serving}, no qual foi ultizado duas câmeras par realizar um acomphamento da posição de ROV.
+
+\subsection{Controle}
+\subsection{Modelos}
+\section{Revisão bibliográfica}
+\subsection{Rede de Citação}
+\subsection{Principais autores}
+\subsection{Modelos}
+\section{Mapa COnceitual}
 \lipsum[1]
 
 %--------- NEW SECTION ----------------------
