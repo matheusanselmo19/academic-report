@@ -55,6 +55,8 @@ Outros tipos de operações são apontadas por \cite{Towards}: \textit{Automatic
 
 Existem vários modelos de robôs submarinos. O formato deste veículos podem ser em função de diversas considerações. Local de atuação, profundidade onde as atividades serão executadas, suporte para a presença de braços manipuladores.
 \subsubsection{BlueROV2}
+
+
 O BlueROV2, representado na Figura \ref{fig:blue}, é desenvolvido pela Blue robotics, uma comphania americana especilizada em robô submarinos. Assim como informa \cite{Bluerobotics}, este veículo é destinado para realizar inpeções e pesquisas. O alcance de profundidade é de 100 m. 6 thursters são responsáveis pela atuação, 4 lâmpadas, também há versões com 6, e uma camêra HD coletar os dados visuais. 
 Além destas configurações, outros intems pode ser adicionados ao exemplo de gripper, para realizar aconrragem, e sonares, para medição de profundidade e escananeamento. Um ponto imporante do Blue Rov é o fato de ROV ser opensource,  que permiti de várias modificações e dominio dos eventuais usuário.
 
@@ -67,7 +69,41 @@ Além destas configurações, outros intems pode ser adicionados ao exemplo de g
 
 \subsubsection{Freedom ROV}
 
-O Freedom ROV, apresentado na Figura \ref{fig:blue}, é desenvolvido pela comphania OCEANEERING, dentêm uma como a principal caracteristicas ter modos de operações híbridas.
+
+O Freedom ROV, apresentado na Figura \ref{fig:freedom_rov}, é desenvolvido pela comphania OCEANEERING, dentêm uma como a principal caracteristicas ter modos de operações híbridas. Segundo \cite{Bogue1}, Freedom pode operar sem intermédio de ações humanas, com ou sem a presença de cabos de comunicação. Este veiculo também capacidade de realizar \textit{subsea residence}, que é capacidade dos robôs ficarem alocadod no mar por um perido longo, neste caso seis meses. Durante o periodo de residência submarina, o Freedom ROV realizar o recarregamento de energia em estações de docagem submersas.
+
+
+\begin{figure}
+  \centering 
+  \includegraphics[width=150.5]{freedom_rov.png}
+  \caption{Freedom ROV}
+  \label{fig:freedom_rov}
+\end{figure}
+
+\subsubsection{SEASCAN MK2}
+
+
+A ECA GROUP, uma companhia franceza especializada em desenvolver veículos marinhos e submarinos, desenvolveu um o ROV SEASCAN MK2, representado na Figura \ref{fig:seascan}. Este robô é tem uma forma de torpedo. De acordo com \cite{ECA_GROUP}, O SEASCAN é um veículo leve e pode ser usado para inspeções, identificação de minas e para missões com fins ambientais. Cabos umbilicais não são usados para nem para cominicação e nem para alimentação.  Uma bateria recarragável é a fonte de alimentação deste robô.
+
+Também é apontado por \cite{ECA_GROUP} que o SEASCAN MK2 também pode realizar algumas duas tarefas autônomas. Uma é dedicada para realizar posicionamento diante a profundidade do veículo, a outra é focada em automatizar o caminho do veículo a alcançar uma area específica.
+
+
+
+\begin{figure}
+  \centering 
+  \includegraphics[width=150.5]{seascan.jpg}
+  \caption{SEASCAN MK2}
+  \label{fig:seascan}
+\end{figure}
+
+
+\subsubsection{Aquant ROV}
+
+O Aquant ROV um é veículo, de acordo \cite{Bogue1}, que além de possuir operação hibrida, autonomo e teleoperado., também não possui um formato único. O Aquant ROV possui dois formatos de operação, um para o modo autonomo, e outro para realizar teleoperação.
+A Figura n representa o Aquant na forma autonoma e  a Figura é o foramto que o Aquant adiquiri ao passar para a atuação teleoperado.
+
+O modo de atuação autonoma é realizada até o robô antingir o momento de realizar as atividades destinadas ao trabalhos com manipuladores. Para atuar de forma com os manipuladores, o Aquant mudar de formato e sua atuação passar a ser completamente por fins de teleoperação, em outras palavras há uma necessidade de presenaça  humana na operação. 
+
 
 
 \section{Revisão bibliográfica}
