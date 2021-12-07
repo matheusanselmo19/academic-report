@@ -1,19 +1,20 @@
 \chapter{Resultados}
 \label{chap:result}
-Importante sempre ter um parágrafo introdutório para explicar os resultados encontrados.
+Os robôs que atuam em mares, rios e lagos, também considerados como drone subaquático, estão ampliando cada vez mais as intervenções humanas nestes ambientes. Os objetivos das intervenções podem ser diversas, mas a industria de óleo e gás demandam a maior quantidade de aplicações destes robôs. 
+
 
 %--------- NEW SECTION ----------------------
 \section{Robôs Subaquáticos}
 
 %Procurar algum artigo que possui definição de rovs
 \label{underwater_robots}
+De acordo com \cite{Bogue1}, Robôs Subaquáticos são importantes na industria petroelo, em ações militares e no monitoramento de ambiente. Estes robôs podem ser classificados em duas categorias diante do modo de operação. Os robôs que depedem de alguma intervenção humana, princiapalmente pela teleoperação, são classificados como remotely operated vehicles (ROVs)
 
-De acordo com \cite{Bogue1}, Robôs Subaquáticos são importantes na exploração petroelo, militar e monitoramento de ambiente. Estes robôs são classificados em duas categorias diante ao modo de operação. Grande parte dos veículos dependem de intervenção humana, mesmo que mínima, para executar as funções.
-A intervenção humana  acontece via teleoperação, comunamente por intermédio de um joystick. Estes robô são classificados como remotely operated vehicles (ROVs). Os veículos que não dependem de ações humanas, sistemas robóticos completamente autônomos, são os   Autonomous Underwater Vehicles (AUVs).
+Segundo \cite{Towards}, os ROVs são veículos subaquáticos que possuem um cabo para realizar comunicação e receber energia elétrica de alguma embarcação ou plataforma. Os ROVs podem ser classificados em três categorias: Eyeball ROV, Observation ROV e Work class ROV. Eyeball ROV, que tem como um dos principais elemetos uma câmera, são empregados geralmente para água razas, já os Observation ROV possui um tamanho maior e podem receber a implementação de manipuladores. Os Work class ROV são maiores, podem alcançar algumas toneladas e pode realizar ações complexas, assim como executar posicionamente dinâmico.
 
 \subsection{Modelos de ROVs}
 
-Existem vários modelos de robôs submarinos. O formato deste veículos podem ser em função de diversas considerações:local de atuação, profundidade onde as atividades serão executadas, suporte para a presença de braços manipuladores.
+Existem vários modelos de robôs submarinos. O formato deste veículos podem ser em função de diversas considerações: local de atuação, profundidade onde as atividades serão executadas, suporte para a presença de braços manipuladores subaquático.
 
 \subsubsection{BlueROV2}
 
@@ -31,7 +32,7 @@ Além destas configurações, outros intems pode ser adicionados ao exemplo de g
 \subsubsection{Freedom ROV}
 
 
-O Freedom ROV, apresentado na Figura \ref{fig:freedom_rov}, é desenvolvido pela comphania OCEANEERING, dentêm uma como a principal caracteristicas ter modos de operações híbridas. Segundo \cite{Bogue1}, Freedom pode operar sem intermédio de ações humanas, com ou sem a presença de cabos de comunicação. Este veiculo também capacidade de realizar \textit{subsea residence}, que é capacidade dos robôs ficarem alocadod no mar por um perido longo, neste caso seis meses. Durante o periodo de residência submarina, o Freedom ROV realizar o recarregamento de energia em estações de docagem submersas.
+O Freedom ROV, apresentado na Figura \ref{fig:freedom_rov}, é desenvolvido pela comphania OCEANEERING, dentêm uma como a principal caracteristicas ter modos de operações híbridas. Segundo \cite{Bogue1}, Freedom pode operar sem intermédio de ações humanas, com ou sem a presença de cabos de comunicação. Este veículo também capacidade de realizar \textit{subsea residence}, que é capacidade dos robôs ficarem alocadod no mar por um perido longo, neste caso seis meses. Durante o periodo de residência submarina, o Freedom ROV realizar o recarregamento de energia em estações de docagem submersas.
 
 
 \begin{figure}
@@ -44,7 +45,7 @@ O Freedom ROV, apresentado na Figura \ref{fig:freedom_rov}, é desenvolvido pela
 \subsubsection{SEASCAN MK2}
 
 
-A ECA GROUP, uma companhia franceza especializada em desenvolver veículos marinhos e submarinos, desenvolveu um o ROV SEASCAN MK2, representado na Figura \ref{fig:seascan}. Este robô é tem uma forma de torpedo. De acordo com \cite{ECA_GROUP}, O SEASCAN é um veículo leve e pode ser usado para inspeções, identificação de minas e para missões com fins ambientais. Cabos umbilicais não são usados para nem para cominicação e nem para alimentação.  Uma bateria recarragável é a fonte de alimentação deste robô.
+A ECA GROUP, uma companhia francesa especializada em desenvolver veículos marinhos e submarinos, desenvolveu um o ROV SEASCAN MK2, representado na Figura \ref{fig:seascan}. Este robô é tem uma forma de torpedo. De acordo com \cite{ECA_GROUP}, O SEASCAN é um veículo leve e pode ser usado para inspeções, identificação de minas e para missões com fins ambientais. Cabos umbilicais não são usados para nem para cominicação e nem para alimentação.  Uma bateria recarragável é a fonte de alimentação deste robô.
 
 Também é apontado por \cite{ECA_GROUP} que o SEASCAN MK2 também pode realizar algumas duas tarefas autônomas. Uma é dedicada para realizar posicionamento diante a profundidade do veículo, a outra é focada em automatizar o caminho do veículo a alcançar uma area específica.
 
@@ -124,8 +125,7 @@ Para os ROVs, grande parte do objetivo do contole é focado na movimentação. A
 % Tipos de Fins
 
 \subsection{Arquitetura de Operação}
-Há diversas formas que as arquiteturas de operação diante do nível de autonomia dos ROVs podem ser implementados. Uma comum é quando um humano é responsável 100\% das atuações do veículos, em outras palavras, é aplicado um controle 100\% manual. O operador, neste caso costuma ser um bastante habilidoso, comunalmente usa uma video câmera para estimar a posiação do veículo no ambiente.
-
+Há diversas formas que as arquiteturas de operação diante do nível de autonomia dos ROVs podem ser implementados. Uma comum é quando um humano é responsável 100\% das atuações do veículos, em outras palavras, é aplicado um controle 100\% manual. O operador, neste caso costuma ser um bastante habilidoso, comunalmente usa uma video câmera para estimar a posiação do veículo no ambiente. \cite{Towards} aponta que uma estrátegia para o controle manual é ultilizar um Head-Mounted display (HMD) juntamente com um joytsick. A ultilização do HMD é dedicado para a navegação do veículo, enquanto o joystick pode ser empregado para operar os braços manipuladores.
 % achar uma referência para o controle manual.
 
 Uma arquitetura, segundo \cite{wireless_joy}, é \textit{Human in the Loop} - HITL- que é realizado considerando a arquitetura \textit{Human Centered Automantion} - HCA. Nesta arquitetura o operador humano realizar algumas tarefas do sistema de controle, ao exemplo de selecionar de qual mode de ação de movimento o veiculo deve realizar. Alguns exemplos dos modo de ação o controle de profundidade, heading e seguir tubulações.
