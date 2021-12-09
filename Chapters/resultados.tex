@@ -108,14 +108,20 @@ Assim como classifica \cite{Towards}, os sensores de um ROV pode distinguindo em
 
 Os navigations sensors são implementados com o foco na navegação do veículo, logos dados sobre a posição, orientantçã e veocidade são os principais alvos a serem mensurados. Os navigations sensors mais comum são: sensores de pressão, (DVL) mede o deslocamento Doppler no sinal de entrada refletido no fundo do mar para obter os dados da velocidade linear e sensores de inercia. 
 Câmeras também podem ser usadas para obter dados da posiação de veículos, assim como foi demostrado por \cite{visual_serving}, no qual foi ultizado duas câmeras par realizar um acomphamento da posição de ROV. Os dados dos sensores podem ser usados para o monitoramento e para as ações de controle.
-
+% lembrar de falar sobre o %USBL
 % Colocar a tabela com as imagens dos principais sensores
+%USBL
 
 
 
 \subsection{Controle}
 % tipo de controle
-Para os ROVs, grande parte do objetivo do contole é focado na movimentação. A aplicação de controle linear 
+% desenhar no drawio um esquematico dos controles para rovs
+Para os ROVs, grande parte do objetivo do contole é focado na movimentação. A aplicação de   estratégia de  controle linear tem forte presença. \cite{Towards} afirma que os controles de movimentos que constumam ser aplicado em ROV são direcionados para desenvolver capacidade de manejo e acomphamento de profundidade. No veículo DexROV, \cite{desgin_joy} implentou aplicou controle em  seis funcionaliades de movimentos, são estes: \textit{Hovering} - posição dinâmica, \textit{Autodepth} controle de profundidae, \textit{autoheading} controle de direção, \textit{autoaltitude} controle de altitude e \textit{Guidance to target position}. Para cada funcionalidade, foi implementada controle proporcional intregal usando dados de USBL. Mesclando o uso destas funcionaliades, com a desconsideração  da existências de obstacuslos, pode ser possivel implementar uma navegação do DexROV.
+
+Uma aplicação de um controle PID não-linear foi aplicado por \cite{wireless_joy}. A aplicação foi destinada para realizar um modo de auto-piloto para ROV.
+
+\cite{visual_serving} usando controle P para ...
 % objetivo de controle
 
 \subsection{Atuação}
