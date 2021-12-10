@@ -121,7 +121,11 @@ Para os ROVs, grande parte do objetivo do contole é focado na movimentação. A
 
 Uma aplicação de um controle PID não-linear foi aplicado por \cite{wireless_joy}. A aplicação foi destinada para realizar um modo de auto-piloto para ROV.
 
-\cite{visual_serving} usando controle P para ...
+Para obter dominio sobre uma  desejada posição, \cite{visual_serving} implementou a estratégia de controle proporcional. A estimação da posição do ROV foi obtida usando algortimo genético em dados captados por um câmera dual. O resultado da implementação foi suficiente para vencer pertubações sofridas pelo o veiculo em diferentes posições. A aplicação de controlr proporcinal não é muito complexa, mas gerou bons resultados que também foi devida a acuricidade da estimação da posição que foi por volta de +- 20 mm. 
+Em outra aplicação apresenta por \cite{dual_eyes}
+
+Para controle de posicionamento de veiculos subaquaticos, esta estratégia atende muito bem, mas para uma operação que requer uma maior precisão das variaveis desejadas, ao exemplo controle de trajetoria de manipuladores, talvez uma aplicação mais robusta pode prover um resultado melhor.  
+
 % objetivo de controle
 
 \subsection{Atuação}
