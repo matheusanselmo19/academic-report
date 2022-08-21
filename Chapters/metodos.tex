@@ -1,39 +1,38 @@
-\chapter{Desenvolvimento do projeto}
+\chapter{Jax Manipulator}
 \label{chap:metod}
-Nesta seção será descrito o procedimento utilizado para construção inicial do robô Walker, incluindo as fases conceitual e design.  Será apresentado a ideação do projeto, especificações e as funcionalidades.
+A ativiade que tem como foco o uso de robôs manipuladores foi Jax Maninpulators. O oabjetivo dest ativadidade foi execução tarefa completamente autônoma. A tarefa consistia, primeiramente, na busca identificação de uma Tag que estava presente no ambiente de operação, e posteriormente, na execução de uma tarefa de movimentação do robô até uma  ação desejada. A ação deseja era a realização de um botão que também estava presente no ambiente.
 
-\section{Ideação}
+
 %escrever oq sera apresentado
 
 \subsection{Arquitetura Geral}
- A arquitetura geral, apresentada na Figura \ref{fig:Arquitetura geral}, relaciona de modo geral a interface do usuário, com a central de gerenciamento do sistema e com a interface com hardware. Neste contexto, a interface do usuário representa o contato direto com o usuário por meio de um botão \textit{on/off}, um \textit{joystick} e por acesso remoto, através de um computador devidamente conectado.
+ A arquitetura geral, apresentada na Figura \ref{fig:Arquitetura geral}, relaciona de modo geral a interface do usuário, com a central de gerenciamento do sistema e com a interface com hardware. Neste contexto, no epectros de softwares  ,foi usado o sistema operacioanl Ubuntu 20.04, o midleware ROS2 Foxy  e pacote de softwate Moveit2. Para o sensorimaebti fora suados os encordes que estavam presentes dos servomotores Dynamixel e um câmera digital. Os servomotores dynamixel compôs o sistema mecânico do robô.  A alimentação dos sistema foi uma fonte 24 v.
 
  \begin{figure} [h!]	
     \centering
 
     \caption{Arquitetura Geral}
-    \includegraphics[width=0.8\textwidth]{general_architecture}
+    \includegraphics[width=0.8\textwidth]{system_architeture2.png}
     \caption*{Fonte: Autoria própria.}
     \label{fig:Arquitetura geral}
 \end{figure}	
 
-Para a central de gerenciamento do sistema utilizou-se o sistema operacional \textit{Ubuntu} 20.04 junto ao framework de robótica ROS \textit{Noetic}. Neste cojunto se encontram as principais funcionalidades do robô: percepção, navegação, detecção e controle. Por fim, no conjunto de saídas estão os atuadores e os alertas sonoro e luminoso.
 
-\subsection{Requisitos técnicos}
+\subsection{Prototype Breakdown Structure}
 
-%desdobramento da função qualidade
-\subsection{Quality Function Deployment}
-\textit{Quality Function Deployment} é uma ferramenta de qualidade que auxilia na conversão das demandas do cliente em características de qualidade do produto. Dessa forma, no primeiro ciclo do QFD foram analisados os requisistos do cliente e os requisitos técnicos necessários, sinalizando os pontos mais importantes e as relações entre estes. O resultado foi exposto na \ref{fig:QFD}
+Uma outra forma de apresentar a estrutura que foi usado é pelo  Prototype breakdown structure (PBS). O PBS ilustra os elementos que foram usados para a construção do sistemas.
+
+
+
 
 \begin{figure} [h!]	
     \centering
-    \caption{ Primeiro ciclo QFD}
-    \includegraphics[width=0.8\textwidth]{Figures/QFD}
-    \caption*{Fonte: Autoria própria.}
-    \label{fig:QFD}
-\end{figure}
- Através do QFD foi possível observar 
 
+    \caption{Arquitetura Geral}
+    \includegraphics[width=0.8\textwidth]{pbs.png}
+    \caption*{Fonte: Autoria própria.}
+    \label{fig:PBS}
+\end{figure}	
 % %--------- NEW SECTION ----------------------
 % \section{Interface do Usuário}
 % \label{sec:ui}
@@ -44,3 +43,6 @@ Para a central de gerenciamento do sistema utilizou-se o sistema operacional \te
 % \label{sec:sim}
 % \lipsum[2-4]
 
+\subsection{Resultados}
+
+Esta ativadidade conseguiu obter sucessos sobre o seu objetivo. O sistema foi capaz de executar a tarefa de forma completamente autônoma. Foi elaborado uma máquina de estados usando a linguagem de programação C++ para facilitar a exeução da tarefa.
